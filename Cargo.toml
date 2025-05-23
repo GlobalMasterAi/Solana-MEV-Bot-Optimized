@@ -1,16 +1,11 @@
-[workspace]
-members = [
-    "programs/*",
-]
-
 [package]
 name = "MEV_Bot_Solana"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-lb_clmm = { path = "./programs/lb_clmm" }
-raydium_amm = { path = "./programs/raydium_amm" }
+lb_clmm = "0.6.1"
+raydium_amm = "0.3.0"
 url = "2.3.1"
 dotenv = "0.15.0"
 anyhow = "1.0.70"
