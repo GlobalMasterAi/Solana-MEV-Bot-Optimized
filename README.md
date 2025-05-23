@@ -81,15 +81,24 @@ The bot follows this algorithmic flow:
    ```
 3. Configure the bot:
    - Create a `.env` file in the root directory.
-   - Add your Solana wallet private key and API keys:
+   - Set the path to your Solana keypair and RPC endpoints:
      ```
-     PRIVATE_KEY=your-wallet-private-key
-     RPC_URL=https://api.mainnet-beta.solana.com(replace with your private rpc)
-     ```
+     PAYER_KEYPAIR_PATH=/path/to/your/keypair.json
+     RPC_URL=https://lb.drpc.org/ogrpc?network=solana&dkey=AqnrDFvdYEk3pZEO0c_dEq2CVVBiN-ER8KthbrRhIxXF
+     RPC_URL_TX=https://lb.drpc.org/ogrpc?network=solana&dkey=AqnrDFvdYEk3pZEO0c_dEq2CVVBiN-ER8KthbrRhIxXF
+     MAINNET_RPC_URL=https://lb.drpc.org/ogrpc?network=solana&dkey=AqnrDFvdYEk3pZEO0c_dEq2CVVBiN-ER8KthbrRhIxXF
+     DEVNET_RPC_URL=https://lb.drpc.org/ogrpc?network=solana&dkey=AqnrDFvdYEk3pZEO0c_dEq2CVVBiN-ER8KthbrRhIxXF
+    WSS_RPC_URL=wss://lb.drpc.org/ogws?network=solana&dkey=AqnrDFvdYEk3pZEO0c_dEq2CVVBiN-ER8KthbrRhIxXF
+    ```
+   - Keep your keypair file **outside** the repository and never commit it to version control.
 4. Run the bot:
    ```bash
    cargo run
    ```
+
+### Key Security
+Store your wallet keypair in a secure location outside of this repository. Set
+`PAYER_KEYPAIR_PATH` to the file path and never commit the key file to Git.
 
 ---
 

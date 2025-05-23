@@ -14,3 +14,6 @@ src/markets/cache/meteora-markets.json
 best_paths_selected/*
 optimism_transactions/*
 src/transactions/cache/pda_list.json
+
+# Ignore local keypairs
+.config/solana/*.json
